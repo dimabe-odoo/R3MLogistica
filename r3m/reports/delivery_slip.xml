@@ -5,6 +5,11 @@
             <xpath expr="//t[@name='lot_serial']" position="after">
                 <th>Peso:</th>
             </xpath>
+            <xpath expr="//t[@name='lot_serial']" position="after">
+                <td>
+                    <span t-field="move_line.lot_id.kilos"/>
+                </td>
+            </xpath>
         </template>
     </data>
 </odoo>
