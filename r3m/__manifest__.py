@@ -33,6 +33,7 @@
         'views/plant.xml',
         'views/stock_quant.xml',
         'reports/delivery_slip.xml',
+        'reports/report_delivery_slip.xml',
         'views/stock_location.xml'
     ],
     # only loaded in demonstration mode
