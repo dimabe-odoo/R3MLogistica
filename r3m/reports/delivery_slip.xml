@@ -3,7 +3,9 @@
     <data>
         <template id="delivery_slip_inherit" inherit_id="stock.report_delivery_document">
             <xpath expr="//t[@name='lot_serial']" position="after">
-                <th>Peso:</th>
+                <t if="has_serial_number">
+                    <th>Peso:</th>
+                </t>
             </xpath>
             <xpath expr="//t[@name='no_package_move_lines']/t[2]/tr" position="after">
                 <tr>
