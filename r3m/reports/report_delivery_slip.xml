@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <template id="stock_move_line_inherit" inherit_id="stock.stock_report_delivery_has_serial_move_line">
-            <xpath expr="//t//td[2]" position="after">
+            <xpath expr="//t//td" position="after">
                 <td>
                     <span t-field="move_line.lot_id.kilos"/>
                 </td>
