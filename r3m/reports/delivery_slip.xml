@@ -5,12 +5,7 @@
             <xpath expr="//t[@name='lot_serial']" position="after">
                 <th>Peso:</th>
             </xpath>
-            <xpath expr="//t[@name='lot_serial']" position="after">
-                <td>
-                    <span t-field="move_line.lot_id.kilos"/>
-                </td>
-            </xpath>
-            <xpath expr="//table[@name='stock_move_line_table']//tbody//tr" position="after">
+            <xpath expr="//t[@name='no_package_move_lines']/t[2]/tr" position="after">
                 <tr>
                     <td rowspan="4">
                         <strong>Total:</strong>
@@ -20,6 +15,14 @@
                         <span t-esc="sum(o.move_line_ids.mapped('lot_id').mapped('kilos'))"/>
                     </td>
                 </tr>
+            </xpath>
+        </template>
+
+        <template id="stock_move_line_inherit" inherit_id="stock_report_delivery_has_serial_move_line">
+            <xpath expr="//t[@name='lot_serial']" position="after">
+                <td>
+                    <span t-field="move_line.lot_id.kilos"/>
+                </td>
             </xpath>
         </template>
     </data>
